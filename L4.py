@@ -7,7 +7,7 @@ from scipy import stats
 import matplotlib.pyplot as plt
 
 # Variables aleatorias A y Z
-wo=np.pi/2
+Wo=np.pi/2
 phi=6
 vaAx = stats.norm(0, np.sqrt(phi^2))
 vaAy = stats.uniform(0, np.sqrt(phi^2))
@@ -61,7 +61,7 @@ for n in range(N):
 	plt.plot(taus, corr[n,:])
 
 # Valor teórico de correlación
-Rxx = (phi^2)*np.cos(wo*taus)
+Rxx = (phi^2)*np.cos(Wo*taus)
 
 # Gráficas de correlación para cada realización y la
 plt.plot(taus, Rxx, '-.', lw=4, label='Correlación teórica')
